@@ -1,0 +1,42 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+  
+  <div class="table">
+  
+    <table class="table table-striped table-bordered table-sm row-border hover"  id="datatableexample">
+    
+      <thead>
+        <tr >
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th >Assign Role to User</th>
+  
+    
+        </tr>
+      </thead>
+      <tbody>
+       <tr *ngFor="let user of data " ><!--*ngFor="let group of data"-->
+             <td>{{user.name}}</td><!--{{group.email}}-->
+             <td>{{user.email}}</td><!--{{group.email}}-->
+             <td><p *ngFor="let composant of user.roles"> {{composant.name}}</p></td><!--{{group.email}}-->
+             <td><input routerLink="../roltouser/{{user.id}}" class="btn btn-large btn-block  btn-outline-info" type="submit" value="Assign Role To User"></td>
+  
+  
+  
+         
+         </tr>
+      </tbody>
+    </table>
+    
+    </div>
+    
+  </div></div></div>
+
+
+  <script>$(document).ready(function () {
+    $.noConflict();
+    var table = $('#datatableexample').DataTable();
+});</script>

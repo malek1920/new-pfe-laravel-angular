@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainservService } from './mainserv.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'front1';
+  constructor(public main_service: MainservService){}
+
 }
