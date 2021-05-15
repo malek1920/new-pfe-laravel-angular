@@ -1,10 +1,11 @@
 .header{
     overflow: hidden;
-    background-color: #00b08c;
+    background-color: #8f8f8f;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 9;
 
   
+    
   }
